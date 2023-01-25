@@ -16,7 +16,7 @@ class  UserManager(BaseUserManager):
         user = self.model(email = email, **extra_fileds)
         user.set_password(password)
         user.save(using=self._db)
-        return user
+        return user 
     
     def create_superuser(self, email, password, **extra_fileds):
         extra_fileds.setdefault('is_staff', True)

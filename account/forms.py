@@ -1,8 +1,7 @@
 from django import forms
 from django.contrib.auth import get_user_model
-from django.contrib.auth.models import User
-from .models import Account
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.models import User
 
 
 class AccountCreationForm(forms.ModelForm):
@@ -18,10 +17,7 @@ class AccountCreationForm(forms.ModelForm):
             'gender': forms.RadioSelect,
             'country': forms.Select,
         }
-        labels = {
-            'terms': 'I agree with terms and conditions.',
-            'newsletter': 'I want to receive a newsletter.'
-        }
+
 
     def clean_terms(self):
         terms = self.cleaned_data.get("terms")
@@ -55,7 +51,4 @@ class LoginForm(AuthenticationForm):
         model = User
         fields = ('email', 'password')
 
-    def __init__(self, *args, **kwargs):
-        super(LoginForm, self).__init__(*args, **kwargs)
-        for visible in self.visible_fields():
-            visible.field.widget.attrs["class"] = "form-control"
+

@@ -1,30 +1,10 @@
 
 import re
-from django.shortcuts import render , redirect
-from .forms import AccountCreationForm, LoginForm
 
 from django.contrib.auth import authenticate, login, logout
+from django.shortcuts import redirect, render
 
-
-
-def email_to_name(email):
-    "Generates display name from an email"
-    username = email.split("@")[0]
-    parts = re.findall(r"[a-zA-Z]+", username)
-
-    if len(parts) == 2:
-        display_name = " ".join(parts)
-    elif parts:
-        display_name = max(parts, key=len)
-        if len(display_name) < 3:
-            display_name = username
-    else:
-        display_name = username
-    display_name = display_name[:30]
-    display_name = display_name.strip().title()
-    return display_name
-
-
+from .forms import AccountCreationForm, LoginForm
 
 
 def register(request):
@@ -58,10 +38,8 @@ def login_view(request):
 
 
 def home(request):
-    message =  "Your account has been login successful .."
-    email = request.user.email 
-    username = email_to_name(email)
-    return render(request, 'index.html', {'message': message, 'username': username})
+    message =  "Your account has been login successful .." 
+    return render(request, 'index.html', {'message': message}) 
 
 
 # logout function
