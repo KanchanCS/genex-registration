@@ -1,9 +1,9 @@
 import re
 from django.db import models
-# Create your models here.
 from django.contrib.auth.models import AbstractUser
-
 from django.contrib.auth.models import  BaseUserManager
+
+# Create your models here.
 
 class  UserManager(BaseUserManager):
     use_in_migrations = True

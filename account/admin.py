@@ -1,4 +1,9 @@
 from django.contrib import admin
-from .models  import Account
+
+from .models import Account
+
 # Register your models here.
-admin.site.register(Account)
+
+class AccountAdmin(admin.ModelAdmin):
+    list_display = ['email', 'gender', 'country']
+admin.site.register(Account, AccountAdmin)
