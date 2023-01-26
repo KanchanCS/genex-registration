@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'genex_db',
         'USER': 'root',
-        'PASSWORD': 'Kanchan!@1',
+        'PASSWORD': 'your_password',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'OPTIONS': {
