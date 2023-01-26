@@ -14,7 +14,7 @@ sources env/Scripts/activate
 ```
 #### install reqierments:
 ```bash
-pip install reqierments.txt
+pip install -r reqierments.txt
 ```
 #### create database 
 ```mysql
