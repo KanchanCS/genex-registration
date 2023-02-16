@@ -11,7 +11,7 @@ class AccountCreationForm(forms.ModelForm):
 
     class Meta:
         model = get_user_model()
-        fields = ('email', 'first_name', 'last_name',
+        fields = ('email', 'first_name', 'last_name','phone','address',
                   'gender', 'country', 'terms', 'newsletter')
         widgets = {
             'gender': forms.RadioSelect,

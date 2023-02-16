@@ -41,6 +41,8 @@ class Account(AbstractUser):
         ('In', "India"),
         ('En', "England")
     )
+    phone = models.CharField(max_length=10 , blank=True)
+    address = models.CharField(max_length=100, blank=True)
     email = models.EmailField(unique=True)
     gender = models.CharField(max_length=20, choices=GENDER , default='Mail')
     country = models.CharField(max_length=100, choices=COUNTRY)

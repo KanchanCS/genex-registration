@@ -54,7 +54,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "genexReg.urls"
-
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -82,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'genex_db',
         'USER': 'root',
-        'PASSWORD': 'your_password',
+        'PASSWORD': 'Kanchan!@1',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'OPTIONS': {

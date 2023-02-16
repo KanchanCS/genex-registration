@@ -33,7 +33,7 @@ def login_view(request):
                 return redirect("account:home")
     else:
         form = LoginForm()
-    context = {"form": form}
+    context = {"form": form} 
     return render(request, "account/login.html", context)
 
 
